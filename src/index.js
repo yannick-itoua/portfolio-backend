@@ -12,8 +12,13 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+// Default route for the root URL
+app.get("/", (req, res) => {
+  res.send("Welcome to the Portfolio Backend!");
+});
+
 // Routes
-app.use("/api/contact", contactRoutes); 
+app.use("/api/contact", contactRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
