@@ -1,8 +1,9 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 
-const router = express.Router(); // Initialize the router
+const router = express.Router();
 
+// POST /api/contact
 router.post("/", async (req, res) => {
   const { name, email, message } = req.body;
 
@@ -11,19 +12,19 @@ router.post("/", async (req, res) => {
   }
 
   try {
-    // Configure Nodemailer transport
+    // Configure Nodemailer transport using environment variables
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user: "yannickitoua911@gmail.com", // Replace with your Gmail address
-        pass: "mhwt zdas wpbu knue", // Replace with your Gmail password or App Password
+        user: process.env.EMAIL_USER, // Your Gmail address from .env
+        pass: process.env.EMAIL_PASS, // Your Gmail password or app-specific password from .env
       },
     });
 
     // Email options
     const mailOptions = {
-      from: email, // Sender's email
-      to: "yannickitoua911@gmail.com", // Your email
+      from: email,
+      to: process.env.EMAIL_USER,
       subject: `Contact Form Submission from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
@@ -38,4 +39,4 @@ router.post("/", async (req, res) => {
   }
 });
 
-module.exports = router; // Export the router
+module.exports = router;
