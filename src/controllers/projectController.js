@@ -4,7 +4,7 @@ const projects = [
     title: "Blogging Platform",
     description: "A platform for creating and managing blog posts.",
     githubLink: "https://github.com/yannick-itoua/blogging-platform",
-    image: "/bloggingplatform.png", // Path to the image
+    image: "/bloggingplatform.png",
   },
   {
     _id: "2",
@@ -22,9 +22,22 @@ const projects = [
   },
 ];
 
+// Get all projects
 const getProjects = (req, res) => {
   res.status(200).json(projects);
 };
 
-module.exports = { getProjects };
-//nothing
+// Add a new project
+const addProject = (req, res) => {
+  const newProject = {
+    _id: String(projects.length + 1),
+    title: req.body.title,
+    description: req.body.description,
+    githubLink: req.body.githubLink,
+    image: req.body.image || "",
+  };
+  projects.push(newProject);
+  res.status(201).json(newProject);
+};
+
+module.exports = { getProjects, addProject };
