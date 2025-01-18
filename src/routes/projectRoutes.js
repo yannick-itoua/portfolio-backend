@@ -1,12 +1,12 @@
 const express = require("express");
-const { getProjects, addProject } = require("../controllers/projectController"); // Import controller functions
+const { getProjects, addProject } = require("../controllers/projectController"); // Import des fonctions
 
 const router = express.Router();
 
-// Route to get all projects
+// Route GET pour obtenir tous les projets
 router.get("/", getProjects);
 
-// Route to add a new project
+// Route POST pour ajouter un nouveau projet
 router.post("/", addProject);
 
 module.exports = router;
