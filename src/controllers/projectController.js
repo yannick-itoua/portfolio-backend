@@ -17,7 +17,7 @@ const projects = [
     _id: "3",
     title: "To-Do App",
     description: "A simple to-do list application with user authentication.",
-    githubLink: "https://github.com/yannick-itoua/to-do-react-django,
+    githubLink: "https://github.com/yannick-itoua/to-do-react-django",
     image: "/todoapp.png",
   },
 ];
