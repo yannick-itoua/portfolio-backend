@@ -4,14 +4,14 @@ const projects = [
     title: "Blogging Platform",
     description: "A platform for creating and managing blog posts.",
     githubLink: "https://github.com/yannick-itoua/blogging-platform",
-    image: "/bloggingplatform.png",
+    image: "/bloggingplatform.png", // Correspond au fichier dans le dossier public
   },
   {
     _id: "2",
     title: "Employee Management System",
     description: "A system to manage employees and their roles.",
     githubLink: "https://github.com/yannick-itoua/employee-management-system",
-    image: "/Employee Management System.png",
+    image: "/employeemanagementsystem.png",
   },
   {
     _id: "3",
@@ -22,22 +22,8 @@ const projects = [
   },
 ];
 
-// Get all projects
 const getProjects = (req, res) => {
   res.status(200).json(projects);
 };
 
-// Add a new project
-const addProject = (req, res) => {
-  const newProject = {
-    _id: String(projects.length + 1),
-    title: req.body.title,
-    description: req.body.description,
-    githubLink: req.body.githubLink,
-    image: req.body.image || "",
-  };
-  projects.push(newProject);
-  res.status(201).json(newProject);
-};
-
-module.exports = { getProjects, addProject };
+module.exports = { getProjects };
