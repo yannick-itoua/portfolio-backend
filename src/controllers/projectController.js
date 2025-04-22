@@ -48,6 +48,7 @@ const projects = [
     description: "EasyAccess is a full-stack web application designed to help users find, share, and manage accessible public spaces in their city. Built with Next.js (React) for the frontend and Spring Boot for the backend, the platform features interactive maps, advanced filtering, and user authentication. Dockerized deployment and a PostgreSQL database ensure easy setup and scalability. The app prevents duplicate data, supports CRUD operations, and provides a seamless user experience for discovering inclusive locations.",
     githubLink: "https://github.com/yannick-itoua/EasyAccess",
     image: "/easyaccess.png",
+  }
 ];
 
 // Fonction pour obtenir tous les projets
