@@ -54,6 +54,22 @@ const projects = [
     githubLink: "https://github.com/yannick-itoua/EasyAccess",
     image: "/easyaccess.png",
     stack: ["Next.js", "React", "Spring Boot", "PostgreSQL", "Docker"]
+  },
+  {
+    _id: "8",
+    title: "BookBox",
+    description: "BookBox is a full-stack digital library management system that allows users to browse, search, borrow and return books. Built with Next.js for the frontend and Spring Boot for the backend, the application features an intuitive UI with dynamic book search, user authentication, and real-time availability tracking. The platform leverages the Open Library API for extended book information and implements a robust borrowing system with status tracking. Containerized with Docker and using PostgreSQL for data persistence, BookBox showcases clean architecture principles with separate frontend/backend services and demonstrates my skills in creating responsive interfaces and RESTful API development.",
+    githubLink: "https://github.com/yannick-itoua/BookBox",
+    image: "/Bookbox.png",
+    stack: ["Next.js", "React", "Spring Boot", "PostgreSQL", "Docker", "Tailwind CSS"]
+  },
+  {
+    _id: "9",
+    title: "WeatherWear",
+    image: "/Weatherwear.png",
+    description: "WeatherWear is a full-stack application built to help users make informed clothing decisions based on real-time weather conditions. Developed with Next.js 15 and TypeScript for the frontend and Spring Boot for the backend, this containerized solution delivers personalized outfit recommendations tailored to local weather patterns. The platform features user profiles with customizable clothing preferences, historical recommendation tracking, and comprehensive weather data visualization. A microservices architecture with Docker ensures smooth deployment and scalability, while the RESTful API design facilitates seamless integration with the OpenWeather API. The responsive UI built with Tailwind CSS provides consistent experiences across devices, helping users navigate unpredictable climates from harsh winters to sudden rainstorms with appropriate attire suggestions.",
+    githubLink: "",
+    stack: ["Next.js", "React", "Spring Boot", "PostgreSQL", "Docker", "Tailwind CSS"]
   }
 ];
 
