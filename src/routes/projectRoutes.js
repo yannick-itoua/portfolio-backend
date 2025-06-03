@@ -9,4 +9,5 @@ router.get("/", getProjects);
 // Route POST pour ajouter un nouveau projet
 router.post("/", addProject);
 
+router.get('/experiences', projectController.getExperiences); 
 module.exports = router;
