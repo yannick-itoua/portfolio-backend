@@ -1,3 +1,17 @@
+const experiences = [
+  {
+    _id: "1",
+    title: "IT Consultant Intern",
+    company: "CGI",
+    employmentType: "Internship",
+    period: "Apr 2024 - Jul 2024 · 4 mos",
+    location: "Lille, Hauts-de-France, France · Hybrid",
+    description: "During my internship at CGI, I took on meaningful responsibilities in backend development where I built and maintained REST APIs that seamlessly connected critical systems. I gained valuable experience working with enterprise tools like Intersystems Cache, while using Postman, DBeaver, and Swagger to ensure API reliability and data integrity. Beyond coding, I actively participated in an Agile team environment, contributing to architectural discussions and using data insights to drive performance improvements. I also enhanced deployment workflows using Azure CI/CD pipelines, significantly reducing release times. One of my key contributions was resolving complex support tickets that improved client satisfaction and taught me how to balance technical problem-solving with effective communication in a professional consulting environment.",
+    image: "/cgi-internship.png",
+    skills: ["Intersystems Cache", "Postman API", "DBeaver", "Mockoon", "SQL", "ObjectScript", "Agile Methodologies", "Microsoft Azure", "Visual Studio", "REST APIs", "Filezilla", "Swagger API", "Docker"]
+  }
+];
+
 const projects = [
   {
     _id: "1",
@@ -68,7 +82,7 @@ const projects = [
     title: "WeatherWear",
     image: "/Weatherwear.png",
     description: "WeatherWear is a full-stack application built to help users make informed clothing decisions based on real-time weather conditions. Developed with Next.js 15 and TypeScript for the frontend and Spring Boot for the backend, this containerized solution delivers personalized outfit recommendations tailored to local weather patterns. The platform features user profiles with customizable clothing preferences, historical recommendation tracking, and comprehensive weather data visualization. A microservices architecture with Docker ensures smooth deployment and scalability, while the RESTful API design facilitates seamless integration with the OpenWeather API. The responsive UI built with Tailwind CSS provides consistent experiences across devices, helping users navigate unpredictable climates from harsh winters to sudden rainstorms with appropriate attire suggestions.",
-    githubLink: "",
+    githubLink: "https://github.com/yannick-itoua/WeatherWear",
     stack: ["Next.js", "React", "Spring Boot", "PostgreSQL", "Docker", "Tailwind CSS"]
   }
 ];
@@ -76,6 +90,11 @@ const projects = [
 // Fonction pour obtenir tous les projets
 const getProjects = (req, res) => {
   res.status(200).json(projects);
+};
+
+// Fonction pour obtenir toutes les expériences
+const getExperiences = (req, res) => {
+  res.status(200).json(experiences);
 };
 
 // Fonction pour ajouter un projet
@@ -92,4 +111,4 @@ const addProject = (req, res) => {
   res.status(201).json(newProject);
 };
 
-module.exports = { getProjects, addProject };
+module.exports = { getProjects, addProject, getExperiences };
