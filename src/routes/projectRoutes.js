@@ -1,13 +1,15 @@
 const express = require("express");
-const { getProjects, addProject } = require("../controllers/projectController"); // Import des fonctions
+const projectController = require("../controllers/projectController"); // Import the full controller
 
 const router = express.Router();
 
 // Route GET pour obtenir tous les projets
-router.get("/", getProjects);
+router.get("/", projectController.getProjects);
 
 // Route POST pour ajouter un nouveau projet
-router.post("/", addProject);
+router.post("/", projectController.addProject);
 
+// Route GET pour obtenir toutes les expériences
 router.get('/experiences', projectController.getExperiences); 
+
 module.exports = router;
